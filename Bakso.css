@@ -1,0 +1,583 @@
+/* =================================================_
+   BAKSO WARISAN NUSANTARA - STYLESHEET EKSTERNAL
+   ================================================= */
+
+/* 1. VARIABEL & RESET DASAR */
+:root {
+  --primary: #d32f2f;
+  --primary-dark: #b71c1c;
+  --secondary: #ffa000;
+  --dark: #212121;
+  --light: #f9f9f9;
+  --gray: #616161;
+  --border-color: #e0e0e0;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* supaya judul tidak tertutup header yang menempel */
+  font-size: 16px;
+}
+
+/* Pastikan atribut hidden (dipakai JavaScript) selalu menyembunyikan elemen */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Skip link untuk aksesibilitas */
+body > a:first-child {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  z-index: 2000;
+  transition: top 0.3s;
+}
+
+body > a:first-child:focus {
+  top: 0;
+}
+
+/* 2. HEADER & NAVIGASI */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header p strong {
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* 3. AKSESIBILITAS FOKUS KEYBOARD (NFR) */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+textarea:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+/* 4. HERO SECTION */
+.hero {
+  /* ============================================================
+     📷 TEMPAT FOTO HERO (latar belakang)
+     File   : img/hero.jpg  (path dihitung dari lokasi Bakso.css)
+     Ukuran : 1600 x 900 px (lanskap), maksimal sekitar 300 KB
+     Isi    : semangkuk bakso dari dekat / suasana kedai
+     Ganti nama file di bawah jika nama fotomu berbeda.
+     ============================================================ */
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('Image/bakso.jpg') center/cover no-repeat;
+  background-color: #3b1d1d; /* warna cadangan kalau foto belum ada */
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 1.8rem;
+}
+
+.hero a[href="#menu"] {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero a[href="#menu"]:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* 5. GENERAL SECTIONS & TITLES */
+section {
+  padding: 4rem 5%;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+/* 6. MENU / KATALOG PRODUK (GRID RESPONSIF) */
+#menu h2 {
+  text-align: center;
+}
+
+#menu > p {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 2.5rem;
+}
+
+#menu > div:not(.section-title) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+article[data-menu] {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+article[data-menu]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+article[data-menu] img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  background-color: #eeeeee; /* tampil rapi walau foto belum dipasang */
+}
+
+article[data-menu] > div {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+article[data-menu] h3 {
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+/* Deskripsi menu (paragraf pertama) */
+article[data-menu] > div > p:first-of-type {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Harga (paragraf kedua) */
+article[data-menu] > div > p:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+article[data-menu] p data {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+/* Tombol Counter Kuantitas Menu */
+article[data-menu] div[role="group"] {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+article[data-menu] div[role="group"] button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article[data-menu] div[role="group"] button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+article[data-menu] div[role="group"] button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+article[data-menu] div[role="group"] output {
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* 7. SECTION TENTANG KAMI */
+#tentang {
+  background-color: #ffffff;
+}
+
+#tentang > div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+#tentang img {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#tentang > div > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+#tentang ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+#tentang li {
+  margin-bottom: 0.8rem;
+}
+
+#tentang li strong {
+  display: block;
+}
+
+/* 8. SECTION KONTAK & KERANJANG / FORM */
+#kontak > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* Kolom Kiri: Info Kedai */
+#kontak address {
+  font-style: normal;
+  margin-top: 1rem;
+}
+
+#kontak address ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#kontak address li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#kontak address img {
+  flex-shrink: 0;
+}
+
+#kontak address a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#kontak address a:hover {
+  text-decoration: underline;
+}
+
+#status-buka {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+#status-buka[data-buka="false"] {
+  color: var(--primary);
+}
+
+/* Kolom Kanan: Keranjang & Form */
+#kontak > div > div:nth-child(2) {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#isi-keranjang {
+  list-style: none;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#isi-keranjang li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 0.95rem;
+}
+
+#total-harga {
+  color: var(--primary);
+}
+
+/* Tombol Kosongkan */
+#kosongkan {
+  background: transparent;
+  border: 1px solid var(--gray);
+  color: var(--gray);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+}
+
+#kosongkan:hover:not(:disabled) {
+  background: var(--dark);
+  color: white;
+  border-color: var(--dark);
+}
+
+#kosongkan:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Formulir Pemesanan */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+}
+
+.contact-form legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0 0.4rem;
+}
+
+.contact-form fieldset > div {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.4rem;
+}
+
+.contact-form fieldset label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+#pesan-galat {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #25d366; /* Warna khas WhatsApp */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex: 1;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #128c7e;
+}
+
+#salin {
+  background-color: var(--dark);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#salin:hover {
+  background-color: #424242;
+}
+
+noscript p {
+  background: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  border: 1px solid #ffeeba;
+}
+
+/* 9. FOOTER */
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 10. MEDIA QUERIES (RESPONSIF PONSEL / TABLET) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  #kontak > div {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* 11. PENGGUNA YANG MEMINTA GERAKAN MINIMAL */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}

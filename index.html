@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bakso Warisan Nusantara di Margonda, Depok. Bakso sapi tanpa pengawet, kuah dari tulang yang direbus lebih dari 6 jam. Buka setiap hari 10.00-22.00 WIB, pesan lewat WhatsApp.">
+  <title>Bakso Warisan Nusantara - Bakso Sapi Margonda, Depok</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Bakso Warisan Nusantara - Bakso Sapi Margonda, Depok">
+  <meta property="og:description" content="Bakso sapi tanpa pengawet dengan kuah tulang yang direbus lebih dari 6 jam. Pesan lewat WhatsApp.">
+
+  <!-- 📷 FOTO PRATINJAU SAAT LINK DIBAGIKAN (opsional)
+       File: img/hero.jpg, ukuran ideal 1200 x 630 px.
+       Hapus tanda komentar pada baris di bawah dan ganti alamat domain jika web sudah online. -->
+  <!-- <meta property="og:image" content="https://domain-kamu.com/img/hero.jpg"> -->
+
+  <!-- Menghubungkan HTML dengan file CSS (harus satu folder dengan index.html) -->
+  <link rel="stylesheet" href="Bakso.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bakso Warisan Nusantara",
+    "servesCuisine": "Bakso",
+    "telephone": "+62-812-9876-5432",
+    "openingHours": "Mo-Su 10:00-22:00",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Margonda Raya No. 88, Beji",
+      "addressLocality": "Depok",
+      "addressRegion": "Jawa Barat",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#konten-utama">Lewati ke konten utama</a>
+  <header>
+    <p><strong>🍜 Bakso Warisan</strong></p>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#kontak">Pesan & Lokasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten-utama">
+
+    <!-- 📷 FOTO HERO: dipasang lewat CSS, bukan lewat tag <img>.
+         Letakkan fotonya di img/hero.jpg (1600 x 900 px). Pengaturannya ada di Bakso.css pada bagian ".hero". -->
+    <section id="beranda" class="hero" aria-labelledby="judul-beranda">
+      <h1 id="judul-beranda">Bakso sapi asli, kuahnya dari tulang</h1>
+      <p>Dagingnya 100% sapi, tanpa pengawet dan tanpa boraks. Kuahnya direbus lebih dari 6 jam bersama rempah, jadi gurihnya terasa sampai suapan terakhir.</p>
+      <p><a href="#menu">Lihat menu</a></p>
+    </section>
+
+    <section id="menu" aria-labelledby="judul-menu">
+      <h2 id="judul-menu">Menu andalan</h2>
+      <p>Atur jumlahnya dengan tombol + dan −, lalu isi nama di bagian pemesanan.</p>
+      <div>
+
+        <article aria-labelledby="menu-1" data-menu="Bakso Urat Granat" data-harga="22000">
+          <!-- 📷 FOTO MENU 1 | File: img/bakso1.jpg | Ukuran: 640 x 480 px (4:3) | Isi: bakso urat granat dengan cabai rawit -->
+          <img src="Image/bakso3.jpg" alt="Semangkuk bakso urat granat dengan cabai rawit" width="320" height="240" loading="lazy" decoding="async">
+          <div>
+            <h3 id="menu-1">Bakso Urat Granat</h3>
+            <p>Bakso urat yang kenyal, di dalamnya ada banyak cabai rawit utuh. Pedasnya baru terasa setelah digigit, jadi siapkan es teh.</p>
+            <p>Rp <data value="22000">22.000</data></p>
+            <div role="group" aria-label="Jumlah Bakso Urat Granat">
+              <button type="button" data-aksi="kurang" aria-label="Kurangi Bakso Urat Granat" disabled>−</button>
+              <output aria-live="polite">0</output>
+              <button type="button" data-aksi="tambah" aria-label="Tambah Bakso Urat Granat">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article aria-labelledby="menu-2" data-menu="Bakso Rusuk Mercon" data-harga="35000">
+          <!-- 📷 FOTO MENU 2 | File: img/bakso2.jpg | Ukuran: 640 x 480 px (4:3) | Isi: bakso rusuk mercon dengan iga sapi -->
+          <img src="Image/bakso2.jpg" alt="Bakso rusuk mercon dengan potongan iga sapi" width="320" height="240" loading="lazy" decoding="async">
+          <div>
+            <h3 id="menu-2">Bakso Rusuk Mercon</h3>
+            <p>Bakso halus yang ditemani potongan iga sapi empuk, disiram kuah pedas yang kaldunya pekat.</p>
+            <p>Rp <data value="35000">35.000</data></p>
+            <div role="group" aria-label="Jumlah Bakso Rusuk Mercon">
+              <button type="button" data-aksi="kurang" aria-label="Kurangi Bakso Rusuk Mercon" disabled>−</button>
+              <output aria-live="polite">0</output>
+              <button type="button" data-aksi="tambah" aria-label="Tambah Bakso Rusuk Mercon">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article aria-labelledby="menu-3" data-menu="Bakso Beranak Keju" data-harga="28000">
+          <!-- 📷 FOTO MENU 3 | File: img/bakso3.jpg | Ukuran: 640 x 480 px (4:3) | Isi: bakso beranak keju yang dibelah -->
+          <img src="Image/bakso4.jpg" alt="Bakso beranak keju yang dibelah, keju meleleh" width="320" height="240" loading="lazy" decoding="async">
+          <div>
+            <h3 id="menu-3">Bakso Beranak Keju</h3>
+            <p>Satu bakso besar berisi bakso-bakso kecil dan keju mozzarella yang meleleh begitu dibelah.</p>
+            <p>Rp <data value="28000">28.000</data></p>
+            <div role="group" aria-label="Jumlah Bakso Beranak Keju">
+              <button type="button" data-aksi="kurang" aria-label="Kurangi Bakso Beranak Keju" disabled>−</button>
+              <output aria-live="polite">0</output>
+              <button type="button" data-aksi="tambah" aria-label="Tambah Bakso Beranak Keju">+</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="tentang" aria-labelledby="judul-tentang">
+      <div>
+        <!-- 📷 FOTO TENTANG KAMI | File: img/warung.jpg | Ukuran: 900 x 600 px (3:2) | Isi: proses membuat bakso / suasana kedai -->
+        <img src="Image/warung.jpg" alt="Proses membuat bakso sapi" width="900" height="600" loading="lazy" decoding="async">
+        <div>
+          <h2 id="judul-tentang">Yang kami jaga dari dulu</h2>
+          <p>Resepnya sederhana, yang penting bahannya jujur. Tidak ada jalan pintas di dapur kami.</p>
+          <ul>
+            <li><strong>Daging sapi segar</strong>Adonan baksonya murni daging sapi.</li>
+            <li><strong>Tanpa pengawet dan boraks</strong>Bakso sebaiknya dimakan hari itu juga.</li>
+            <li><strong>Kuah tulang sapi, 6 jam lebih</strong>Dibumbui rempah Nusantara, tanpa perasa tambahan yang berlebihan.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" aria-labelledby="judul-kontak">
+      <h2 id="judul-kontak">Pesan & lokasi</h2>
+      <div>
+
+        <div>
+          <h3>Kedai kami</h3>
+          <address>
+            <ul>
+              <li>
+                <!-- 📷 IKON LOKASI | File: icon/location.png | Ukuran: 40 x 40 px, latar transparan -->
+                <img src="icon/location.png" alt="Lokasi" width="20" height="20" decoding="async">
+                <span>Jl. Margonda Raya No. 88, Beji, Kota Depok, Jawa Barat</span>
+              </li>
+              <li>
+                <!-- 📷 IKON TELEPON | File: icon/phone.png | Ukuran: 40 x 40 px, latar transparan -->
+                <img src="icon/phone.png" alt="Telepon" width="20" height="20" decoding="async">
+                <a href="https://wa.me/6281298765432" target="_blank" rel="noopener noreferrer">+62 812-9876-5432 (WhatsApp)</a>
+              </li>
+              <li>
+                <!-- 📷 IKON JAM | File: icon/clock.png | Ukuran: 40 x 40 px, latar transparan -->
+                <img src="icon/clock.png" alt="Jam buka" width="20" height="20" decoding="async">
+                <span>Setiap hari, 10.00 - 22.00 WIB</span>
+              </li>
+            </ul>
+          </address>
+          <p id="status-buka" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <h3>Pesananmu</h3>
+          <div>
+            <p id="keranjang-kosong">Belum ada pesanan. Pilih menu di atas dulu, ya.</p>
+            <ul id="isi-keranjang" aria-live="polite"></ul>
+            <p><strong>Total: <span id="total-harga">Rp 0</span></strong></p>
+            <p>Belum termasuk ongkos kirim. Kami konfirmasi lewat WhatsApp.</p>
+            <button type="button" id="kosongkan" disabled>Kosongkan pesanan</button>
+          </div>
+
+          <form id="form-pesan" class="contact-form" novalidate>
+            <p>
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" required autocomplete="name" maxlength="80" placeholder="Nama kamu">
+            </p>
+            <fieldset>
+              <legend>Cara menerima</legend>
+              <div>
+                <label><input type="radio" name="cara" value="Diantar" checked> Diantar</label>
+                <label><input type="radio" name="cara" value="Ambil sendiri"> Ambil di kedai</label>
+              </div>
+            </fieldset>
+            <p id="blok-alamat">
+              <label for="alamat">Alamat pengantaran</label>
+              <textarea id="alamat" name="alamat" rows="2" maxlength="200" autocomplete="street-address" placeholder="Nama jalan, nomor rumah, patokan"></textarea>
+            </p>
+            <fieldset>
+              <legend>Bayar pakai</legend>
+              <div>
+                <label><input type="radio" name="bayar" value="Tunai" checked> Tunai</label>
+                <label><input type="radio" name="bayar" value="Transfer"> Transfer</label>
+              </div>
+            </fieldset>
+            <p>
+              <label for="catatan">Catatan (boleh kosong)</label>
+              <textarea id="catatan" name="catatan" rows="2" maxlength="300" placeholder="Misalnya: tanpa tauge, kuah dipisah"></textarea>
+            </p>
+            <p id="pesan-galat" role="alert"></p>
+            <div class="form-actions">
+              <button type="submit">Kirim lewat WhatsApp</button>
+              <button type="button" id="salin">Salin pesanan</button>
+            </div>
+          </form>
+          <noscript>
+            <p>JavaScript sedang mati, jadi form di atas tidak bisa dipakai. Silakan pesan langsung lewat <a href="https://wa.me/6281298765432" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+          </noscript>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bakso Warisan Nusantara. Proyek simulasi tugas akademik.</p>
+    <p><a href="#beranda">Kembali ke atas</a></p>
+  </footer>
+  <script>
+    'use strict';
+    const NOMOR_WA = '6281298765432';
+    const JAM_BUKA = 10;
+    const JAM_TUTUP = 22;
+    const KUNCI = 'bakso-warisan-keranjang';
+    const form = document.getElementById('form-pesan');
+    const galat = document.getElementById('pesan-galat');
+    const rupiah = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 });
+    /* ---------- Keranjang ---------- */
+    const kartu = Array.from(document.querySelectorAll('article[data-menu]'));
+    const jumlah = {};
+    kartu.forEach(function (k) { jumlah[k.dataset.menu] = 0; });
+    function muatKeranjang() {
+      try {
+        const simpan = JSON.parse(localStorage.getItem(KUNCI) || '{}');
+        Object.keys(jumlah).forEach(function (nama) {
+          const n = parseInt(simpan[nama], 10);
+          if (n > 0 && n <= 99) jumlah[nama] = n;
+        });
+      } catch (e) { /* abaikan, mulai dari kosong */ }
+    }
+    function simpanKeranjang() {
+      try { localStorage.setItem(KUNCI, JSON.stringify(jumlah)); } catch (e) { /* tidak masalah */ }
+    }
+    const daftar = document.getElementById('isi-keranjang');
+    const kosong = document.getElementById('keranjang-kosong');
+    const totalEl = document.getElementById('total-harga');
+    const tombolKosongkan = document.getElementById('kosongkan');
+    function hitung() {
+      let total = 0, banyak = 0;
+      kartu.forEach(function (k) {
+        const n = jumlah[k.dataset.menu];
+        total += n * Number(k.dataset.harga);
+        banyak += n;
+      });
+      return { total: total, banyak: banyak };
+    }
+    function gambar() {
+      daftar.textContent = '';
+      kartu.forEach(function (k) {
+        const nama = k.dataset.menu;
+        const n = jumlah[nama];
+        k.querySelector('output').textContent = n;
+        k.querySelector('[data-aksi="kurang"]').disabled = n === 0;
+        k.querySelector('[data-aksi="tambah"]').disabled = n >= 99;
+        if (n > 0) {
+          const li = document.createElement('li');
+          const kiri = document.createElement('span');
+          const kanan = document.createElement('span');
+          kiri.textContent = n + ' × ' + nama;
+          kanan.textContent = ' - ' + rupiah.format(n * Number(k.dataset.harga));
+          li.append(kiri, kanan);
+          daftar.appendChild(li);
+        }
+      });
+      const h = hitung();
+      totalEl.textContent = rupiah.format(h.total);
+      kosong.hidden = h.banyak > 0;
+      tombolKosongkan.disabled = h.banyak === 0;
+      simpanKeranjang();
+    }
+
+    kartu.forEach(function (k) {
+      k.querySelectorAll('[data-aksi]').forEach(function (tombol) {
+        tombol.addEventListener('click', function () {
+          const nama = k.dataset.menu;
+          const delta = tombol.dataset.aksi === 'tambah' ? 1 : -1;
+          jumlah[nama] = Math.min(99, Math.max(0, jumlah[nama] + delta));
+          galat.textContent = '';
+          gambar();
+        });
+      });
+    });
+
+    tombolKosongkan.addEventListener('click', function () {
+      Object.keys(jumlah).forEach(function (nama) { jumlah[nama] = 0; });
+      gambar();
+    });
+
+    /* ---------- Alamat hanya untuk pengantaran ---------- */
+    const blokAlamat = document.getElementById('blok-alamat');
+    const alamat = form.elements.alamat;
+    function aturAlamat() {
+      const antar = form.elements.cara.value === 'Diantar';
+      blokAlamat.hidden = !antar;
+      alamat.required = antar;
+    }
+    form.querySelectorAll('input[name="cara"]').forEach(function (r) {
+      r.addEventListener('change', aturAlamat);
+    });
+    /* ---------- Status buka / tutup (waktu Jakarta) ---------- */
+    const statusBuka = document.getElementById('status-buka');
+    function perbaruiStatus() {
+      const jam = Number(new Intl.DateTimeFormat('en-GB', {
+        hour: '2-digit', hour12: false, timeZone: 'Asia/Jakarta'
+      }).format(new Date())) % 24;
+      const buka = jam >= JAM_BUKA && jam < JAM_TUTUP;
+      statusBuka.dataset.buka = buka;
+      statusBuka.textContent = buka
+        ? 'Sedang buka, sampai pukul 22.00 WIB'
+        : 'Sedang tutup, buka lagi pukul 10.00 WIB. Pesanan tetap bisa dikirim.';
+    }
+    perbaruiStatus();
+    setInterval(perbaruiStatus, 60000);
+    /* ---------- Menyusun pesan ---------- */
+    function susunPesan() {
+      const nama = form.elements.nama.value.trim();
+      const cara = form.elements.cara.value;
+      const bayar = form.elements.bayar.value;
+      const catatan = form.elements.catatan.value.trim();
+      const baris = ['Halo, saya ' + nama + '. Mau pesan:'];
+      kartu.forEach(function (k) {
+        const n = jumlah[k.dataset.menu];
+        if (n > 0) baris.push('- ' + n + ' × ' + k.dataset.menu + ' (' + rupiah.format(n * Number(k.dataset.harga)) + ')');
+      });
+      baris.push('Total: ' + rupiah.format(hitung().total) + ' (belum ongkir)');
+      baris.push(cara === 'Diantar' ? 'Diantar ke: ' + alamat.value.trim() : 'Ambil sendiri di kedai');
+      baris.push('Bayar: ' + bayar);
+      baris.push('Catatan: ' + (catatan || '-'));
+      return baris.join('\n');
+    }
+    function periksa() {
+      if (hitung().banyak === 0) {
+        galat.textContent = 'Pilih minimal satu menu dulu.';
+        document.getElementById('menu').scrollIntoView();
+        return false;
+      }
+      if (!form.elements.nama.value.trim()) {
+        galat.textContent = 'Nama belum diisi.';
+        form.elements.nama.focus();
+        return false;
+      }
+      if (form.elements.cara.value === 'Diantar' && !alamat.value.trim()) {
+        galat.textContent = 'Alamat pengantaran belum diisi.';
+        alamat.focus();
+        return false;
+      }
+      galat.textContent = '';
+      return true;
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!periksa()) return;
+      window.open(
+        'https://wa.me/' + NOMOR_WA + '?text=' + encodeURIComponent(susunPesan()),
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+    document.getElementById('salin').addEventListener('click', function () {
+      if (!periksa()) return;
+      const teks = susunPesan();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(teks).then(function () {
+          galat.textContent = 'Pesanan sudah disalin. Tinggal tempel di WhatsApp.';
+        }, function () {
+          galat.textContent = 'Gagal menyalin. Pakai tombol WhatsApp saja.';
+        });
+      } else {
+        galat.textContent = 'Browser ini tidak bisa menyalin. Pakai tombol WhatsApp saja.';
+      }
+    });
+    muatKeranjang();
+    aturAlamat();
+    gambar();
+  </script>
+</body>
+</html>
